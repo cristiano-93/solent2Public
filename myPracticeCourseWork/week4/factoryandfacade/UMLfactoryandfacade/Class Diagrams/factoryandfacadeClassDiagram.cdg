@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="factoryandfacadeClassDiagram">
+  <ClassDiagramComponents>
+    <Class name="AnimalObjectFactory" package="org.solent.com504.factoryandfacade.model" visibility="public" xPosition="454.0" yPosition="42.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createCat" returnType="Animal" visibility="public" isStatic="true"/>
+        <Method name="createDog" returnType="Animal" visibility="public" isStatic="true"/>
+        <Method name="createCow" returnType="Animal" visibility="public" isStatic="true"/>
+        <Method name="createFarmFacade" returnType="FarmFacade" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Cat" package="org.solent.com504.factoryandfacade.model" visibility="public" xPosition="750.0" yPosition="430.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Dog" package="org.solent.com504.factoryandfacade.model" visibility="public" xPosition="579.0" yPosition="430.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cow" package="org.solent.com504.factoryandfacade.model" visibility="public" xPosition="919.0" yPosition="430.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Duck" package="org.solent.com504.factoryandfacade.model" visibility="public" xPosition="408.0" yPosition="430.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Animal" package="org.solent.com504.factoryandfacade.model" visibility="public" xPosition="606.0" yPosition="249.0">
+      <Methods>
+        <Method name="getSound" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="String" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="FarmFacade" package="org.solent.com504.factoryandfacade.model" visibility="public" xPosition="204.0" yPosition="220.0">
+      <Methods>
+        <Method name="getAllAnimals" returnType="List&lt;Animal&gt;" visibility="public"/>
+        <Method name="addDog" returnType="String" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="addCat" returnType="String" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="addCow" returnType="String" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="addDuck" returnType="String" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="org.solent.com504.factoryandfacade.model.Cat" target="org.solent.com504.factoryandfacade.model.Animal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="org.solent.com504.factoryandfacade.model.Dog" target="org.solent.com504.factoryandfacade.model.Animal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="org.solent.com504.factoryandfacade.model.Cow" target="org.solent.com504.factoryandfacade.model.Animal"/>
+    <UseRelation name="createsObjects" source="org.solent.com504.factoryandfacade.model.AnimalObjectFactory" target="org.solent.com504.factoryandfacade.model.Animal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="usesAnimal" source="org.solent.com504.factoryandfacade.model.FarmFacade" target="org.solent.com504.factoryandfacade.model.Animal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="org.solent.com504.factoryandfacade.model.Duck" target="org.solent.com504.factoryandfacade.model.Animal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
